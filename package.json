@@ -1,6 +1,16 @@
 {
+  "workspaces": [
+    "financas-lite/api",
+    "financas-lite-frontend"
+  ],
+  "scripts": {
+    "api:dev": "npm --prefix financas-lite/api run dev",
+    "web:dev": "npm --prefix financas-lite-frontend run dev",
+    "dev": "concurrently \"npm run api:dev\" \"npm run web:dev\""
+  },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.13",
+    "concurrently": "^9.1.0",
     "tailwindcss": "^4.1.13"
   }
 }
